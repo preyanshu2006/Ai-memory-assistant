@@ -1,0 +1,48 @@
+:root {
+  --paper: #faf9f6;
+  --surface: #ffffff;
+  --ink: #211f2b;
+  --ink-soft: #635f72;
+  --line: #e6e3dc;
+  --indigo: #2e2a4f;
+  --indigo-soft: #4a4570;
+  --gold: #b4893c;
+  --gold-soft: #f1e6cd;
+  --danger: #a33636;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--gold-soft);
+}
+
+button {
+  font-family: inherit;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
