@@ -285,5 +285,4 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port, debug=debug)
     @app.route("/")
     def home():
-        return {"message":
-        "Backend is running"}
+        return "AI Memory Assistant is Running!"
