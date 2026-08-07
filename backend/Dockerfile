@@ -16,7 +16,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Render/most hosts inject $PORT; default to 5000 for local `docker run`.
-ENV PORT=5000
-EXPOSE 5000
+EXPOSE 10000
 
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT} --timeout 120 app:app"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:10000"]
