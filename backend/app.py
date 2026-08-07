@@ -284,6 +284,6 @@ if __name__ == "__main__":
     debug = os.environ.get("FLASK_DEBUG", "true").lower() == "true"
     app.run(host="0.0.0.0", port=port, debug=debug)
     @app.route("/")
-    def home();
+    def home():
         return {"message":
         "Backend is running"}
