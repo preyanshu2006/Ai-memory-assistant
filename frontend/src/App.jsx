@@ -4,7 +4,7 @@ import './App.css'
 // Locally this falls back to your Flask dev server. In production, Vercel
 // (or whichever host you use) injects VITE_API_BASE from its dashboard —
 // set it to your deployed backend's URL, e.g. https://your-app.onrender.com/api
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/api'
+const API_BASE = "https://ai-memory-assistant-3.onrender.com/api"
 
 export default function App() {
   const [files, setFiles] = useState([])
