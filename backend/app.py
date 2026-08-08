@@ -39,6 +39,10 @@ TOP_K_DEFAULT = 4
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "App is working"
+
 # In dev, the Vite server runs on a different port, so CORS must allow it.
 # In production, set ALLOWED_ORIGIN to your deployed frontend's URL (e.g.
 # https://your-app.vercel.app). "*" is used only if nothing is set, which is
@@ -283,9 +287,6 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     debug = os.environ.get("FLASK_DEBUG", "true").lower() == "true"
     app.run(host="0.0.0.0", port=port, debug=debug)
-    @app.route("/")
-    def home():
-        return "Working Perfectly"
     @app.route ("/test")
     def test():
-        return "Test route working"
+        return "Test working"
